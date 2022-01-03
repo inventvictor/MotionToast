@@ -23,8 +23,8 @@ import www.sanju.motiontoast.databinding.MotionToastBinding
 class MotionToast {
     companion object {
 
-        const val LONG_DURATION = 5000L // 5 seconds
-        const val SHORT_DURATION = 2000L // 2 seconds
+        val LONG_DURATION = ToastDuration.LONG_DURATION
+        val SHORT_DURATION = ToastDuration.SHORT_DURATION
         const val GRAVITY_TOP = 50
         const val GRAVITY_CENTER = 20
         const val GRAVITY_BOTTOM = 80
@@ -104,7 +104,7 @@ class MotionToast {
             message: String,
             style: MotionToastStyle,
             position: Int,
-            duration: Long,
+            duration: ToastDuration,
             font: Typeface?
         ) {
             layoutInflater = LayoutInflater.from(context)
@@ -156,7 +156,7 @@ class MotionToast {
 
                     // init toast
                     val toast = Toast(context.applicationContext)
-                    startTimer(duration, toast)
+                    toast.duration = duration.toAndroidToastDuration()
 
                     // Setting Toast Gravity
                     setGravity(position, toast)
@@ -205,7 +205,7 @@ class MotionToast {
                     )
 
                     val toast = Toast(context.applicationContext)
-                    startTimer(duration, toast)
+                    toast.duration = duration.toAndroidToastDuration()
 
                     setGravity(position, toast)
                     toast.view = layout//setting the view of custom toast layout
@@ -249,7 +249,7 @@ class MotionToast {
                     )
 
                     val toast = Toast(context.applicationContext)
-                    startTimer(duration, toast)
+                    toast.duration = duration.toAndroidToastDuration()
 
                     setGravity(position, toast)
                     toast.view = layout//setting the view of custom toast layout
@@ -294,7 +294,7 @@ class MotionToast {
                     )
 
                     val toast = Toast(context.applicationContext)
-                    startTimer(duration, toast)
+                    toast.duration = duration.toAndroidToastDuration()
 
                     setGravity(position, toast)
                     toast.view = layout//setting the view of custom toast layout
@@ -338,7 +338,7 @@ class MotionToast {
                     )
 
                     val toast = Toast(context.applicationContext)
-                    startTimer(duration, toast)
+                    toast.duration = duration.toAndroidToastDuration()
 
                     setGravity(position, toast)
                     toast.view = layout//setting the view of custom toast layout
@@ -384,7 +384,7 @@ class MotionToast {
                     )
 
                     val toast = Toast(context.applicationContext)
-                    startTimer(duration, toast)
+                    toast.duration = duration.toAndroidToastDuration()
 
                     setGravity(position, toast)
                     toast.view = layout//setting the view of custom toast layout
@@ -400,7 +400,7 @@ class MotionToast {
             message: String,
             style: MotionToastStyle,
             position: Int,
-            duration: Long,
+            duration: ToastDuration,
             font: Typeface?
         ) {
             layoutInflater = LayoutInflater.from(context)
@@ -444,7 +444,7 @@ class MotionToast {
 
                     // init toast
                     val toast = Toast(context.applicationContext)
-                    startTimer(duration, toast)
+                    toast.duration = duration.toAndroidToastDuration()
 
                     // Setting Toast Gravity
                     setGravity(position, toast)
@@ -489,7 +489,7 @@ class MotionToast {
 
                     // init toast
                     val toast = Toast(context.applicationContext)
-                    startTimer(duration, toast)
+                    toast.duration = duration.toAndroidToastDuration()
 
                     // Setting Toast Gravity
                     setGravity(position, toast)
@@ -534,7 +534,7 @@ class MotionToast {
 
                     // init toast
                     val toast = Toast(context.applicationContext)
-                    startTimer(duration, toast)
+                    toast.duration = duration.toAndroidToastDuration()
 
                     // Setting Toast Gravity
                     setGravity(position, toast)
@@ -579,7 +579,7 @@ class MotionToast {
 
                     // init toast
                     val toast = Toast(context.applicationContext)
-                    startTimer(duration, toast)
+                    toast.duration = duration.toAndroidToastDuration()
 
                     // Setting Toast Gravity
                     setGravity(position, toast)
@@ -624,7 +624,7 @@ class MotionToast {
 
                     // init toast
                     val toast = Toast(context.applicationContext)
-                    startTimer(duration, toast)
+                    toast.duration = duration.toAndroidToastDuration()
 
                     // Setting Toast Gravity
                     setGravity(position, toast)
@@ -670,7 +670,7 @@ class MotionToast {
 
                     // init toast
                     val toast = Toast(context.applicationContext)
-                    startTimer(duration, toast)
+                    toast.duration = duration.toAndroidToastDuration()
 
                     // Setting Toast Gravity
                     setGravity(position, toast)
@@ -689,7 +689,7 @@ class MotionToast {
             message: String,
             style: MotionToastStyle,
             position: Int,
-            duration: Long,
+            duration: ToastDuration,
             font: Typeface?
         ) {
             layoutInflater = LayoutInflater.from(context)
@@ -736,7 +736,7 @@ class MotionToast {
 
                     // init toast
                     val toast = Toast(context.applicationContext)
-                    startTimer(duration, toast)
+                    toast.duration = duration.toAndroidToastDuration()
 
                     // Setting Toast Gravity
                     setGravity(position, toast)
@@ -786,7 +786,7 @@ class MotionToast {
 
                     // init toast
                     val toast = Toast(context.applicationContext)
-                    startTimer(duration, toast)
+                    toast.duration = duration.toAndroidToastDuration()
 
                     // Setting Toast Gravity
                     setGravity(position, toast)
@@ -836,7 +836,7 @@ class MotionToast {
 
                     // init toast
                     val toast = Toast(context.applicationContext)
-                    startTimer(duration, toast)
+                    toast.duration = duration.toAndroidToastDuration()
 
                     // Setting Toast Gravity
                     setGravity(position, toast)
@@ -886,7 +886,7 @@ class MotionToast {
 
                     // init toast
                     val toast = Toast(context.applicationContext)
-                    startTimer(duration, toast)
+                    toast.duration = duration.toAndroidToastDuration()
 
                     // Setting Toast Gravity
                     setGravity(position, toast)
@@ -938,7 +938,7 @@ class MotionToast {
                     val toast = Toast(context.applicationContext)
 
                     //   Setting up the duration
-                    startTimer(duration, toast)
+                    toast.duration = duration.toAndroidToastDuration()
 
                     // Setting Toast Gravity
                     setGravity(position, toast)
@@ -991,7 +991,7 @@ class MotionToast {
                     val toast = Toast(context.applicationContext)
 
                     //   Setting up the duration
-                    startTimer(duration, toast)
+                    toast.duration = duration.toAndroidToastDuration()
 
                     // Setting Toast Gravity
                     setGravity(position, toast)
@@ -1011,7 +1011,7 @@ class MotionToast {
             message: String,
             style: MotionToastStyle,
             position: Int,
-            duration: Long,
+            duration: ToastDuration,
             font: Typeface?
         ) {
             layoutInflater = LayoutInflater.from(context)
@@ -1062,7 +1062,7 @@ class MotionToast {
 
                     // init toast
                     val toast = Toast(context.applicationContext)
-                    startTimer(duration, toast)
+                    toast.duration = duration.toAndroidToastDuration()
 
                     // Setting Toast Gravity
                     setGravity(position, toast)
@@ -1109,7 +1109,7 @@ class MotionToast {
                     )
 
                     val toast = Toast(context.applicationContext)
-                    startTimer(duration, toast)
+                    toast.duration = duration.toAndroidToastDuration()
 
                     setGravity(position, toast)
                     toast.view = layout//setting the view of custom toast layout
@@ -1153,7 +1153,7 @@ class MotionToast {
                     )
 
                     val toast = Toast(context.applicationContext)
-                    startTimer(duration, toast)
+                    toast.duration = duration.toAndroidToastDuration()
 
                     setGravity(position, toast)
                     toast.view = layout//setting the view of custom toast layout
@@ -1198,7 +1198,7 @@ class MotionToast {
                     )
 
                     val toast = Toast(context.applicationContext)
-                    startTimer(duration, toast)
+                    toast.duration = duration.toAndroidToastDuration()
 
                     setGravity(position, toast)
                     toast.view = layout//setting the view of custom toast layout
@@ -1242,7 +1242,7 @@ class MotionToast {
                     )
 
                     val toast = Toast(context.applicationContext)
-                    startTimer(duration, toast)
+                    toast.duration = duration.toAndroidToastDuration()
 
                     setGravity(position, toast)
                     toast.view = layout//setting the view of custom toast layout
@@ -1285,26 +1285,13 @@ class MotionToast {
                         binding.customToastDescription
                     )
                     val toast = Toast(context.applicationContext)
-                    startTimer(duration, toast)
+                    toast.duration = duration.toAndroidToastDuration()
 
                     setGravity(position, toast)
                     toast.view = layout//setting the view of custom toast layout
                     toast.show()
                 }
             }
-        }
-
-        private fun startTimer(duration: Long, toast: Toast) {
-            val timer = object : CountDownTimer(duration, 1000) {
-                override fun onTick(millisUntilFinished: Long) {
-                    // do nothing
-                }
-
-                override fun onFinish() {
-                    toast.cancel()
-                }
-            }
-            timer.start()
         }
 
         private fun startPulseAnimation(context: Activity, customToastImage: ImageView) {
@@ -1347,4 +1334,16 @@ class MotionToast {
             layout.background = drawable
         }
     }
+    
+    enum class ToastDuration {
+        SHORT_DURATION,
+        LONG_DURATION
+    }
 }
+
+private fun MotionToast.ToastDuration.toAndroidToastDuration(): Int =
+    if (this == MotionToast.ToastDuration.SHORT_DURATION) {
+        Toast.LENGTH_SHORT
+    } else {
+        Toast.LENGTH_LONG
+    }
