@@ -6,8 +6,14 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2155" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.20833333333333334" />
         <entry key="motiontoast/src/main/res/drawable/toast_round_background.xml" value="0.2155" />
-        <entry key="motiontoast/src/main/res/layout/full_color_toast.xml" value="0.1330708821614583" />
-        <entry key="motiontoast/src/main/res/layout/motion_toast.xml" value="0.20833333333333334" />
+        <entry key="motiontoast/src/main/res/font/inter.xml" value="0.23854166666666668" />
+        <entry key="motiontoast/src/main/res/font/inter_bold.xml" value="0.23854166666666668" />
+        <entry key="motiontoast/src/main/res/font/inter_extrabold.xml" value="0.23854166666666668" />
+        <entry key="motiontoast/src/main/res/font/inter_regular.xml" value="0.23854166666666668" />
+        <entry key="motiontoast/src/main/res/font/montserrat_bold.xml" value="0.23854166666666668" />
+        <entry key="motiontoast/src/main/res/font/montserrat_regular.xml" value="0.23854166666666668" />
+        <entry key="motiontoast/src/main/res/layout/full_color_toast.xml" value="0.5154927571614583" />
+        <entry key="motiontoast/src/main/res/layout/motion_toast.xml" value="0.7" />
       </map>
     </option>
   </component>

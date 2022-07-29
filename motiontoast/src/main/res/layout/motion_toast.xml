@@ -64,7 +64,7 @@
             android:layout_marginTop="@dimen/dimen_4"
             android:layout_marginEnd="@dimen/dimen_12"
             android:layout_marginBottom="@dimen/dimen_12"
-            android:fontFamily="@font/inter_regular"
+            android:fontFamily="@font/inter"
             android:ellipsize="marquee"
             android:maxLines="2"
             android:text="@string/text_mock_description"
